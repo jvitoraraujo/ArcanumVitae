@@ -1,0 +1,108 @@
+/* DEVA — tokens globais (Manual de Marca v1.3) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Fundos */
+  --deva-bg-canvas: #050811; --deva-bg-surface: #0B111E; --deva-bg-elevated: #0F172A;
+  /* Bordas */
+  --deva-border-subtle: #1E293B; --deva-border-line: rgba(141,169,196,.2);
+  --deva-border-gold: rgba(223,177,91,.35); --deva-border-control: #5B7490;
+  /* Cores */
+  --deva-gold-primary: #DFB15B; --deva-gold-hover: #E2B857; --deva-blue-celestial: #8DA9C4;
+  --deva-white-parchment: #E2E8F0; --deva-text-muted: #94A3B8; --deva-silver: #CBD5E1;
+  /* Semântica: ouro nunca sinaliza estado */
+  --deva-success: #7FC4A0; --deva-warning: #E9A64A; --deva-error: #E8837C; --deva-info: #8DA9C4;
+  /* Tipografia */
+  --deva-font-serif: 'Cinzel','Cormorant Garamond',Georgia,serif;
+  --deva-font-mono: 'JetBrains Mono','Fira Code','Courier New',monospace;
+  --deva-font-sans: 'Inter','Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --deva-lh-body: 1.55;
+  /* Brilhos, foco, overlay */
+  --deva-glow-gold: 0 0 15px rgba(223,177,91,.15); --deva-glow-blue: 0 0 12px rgba(141,169,196,.12);
+  --deva-focus-ring: 0 0 0 2px var(--deva-bg-canvas), 0 0 0 4px var(--deva-gold-primary);
+  --deva-overlay: rgba(5,8,17,.78);
+  /* Espaçamento, raio, movimento, camadas (derivados) */
+  --deva-space-1:4px; --deva-space-2:8px; --deva-space-3:12px; --deva-space-4:16px; --deva-space-5:24px;
+  --deva-space-6:32px; --deva-space-7:48px; --deva-space-8:64px; --deva-space-9:96px;
+  --deva-radius-sm: 2px; --deva-radius: 4px;
+  --deva-dur-fast: 200ms; --deva-dur-base: 300ms; --deva-dur-slow: 500ms; --deva-ease: cubic-bezier(.4,0,.2,1);
+  --deva-z-sticky:100; --deva-z-dropdown:200; --deva-z-overlay:300; --deva-z-modal:400; --deva-z-toast:500; --deva-z-tooltip:600;
+  --deva-touch: 44px;
+}
+/* Pontos de quebra: 600 / 900 / 1200 / 1440 px */
+
+body { background: var(--deva-bg-canvas); color: var(--deva-white-parchment); font-family: var(--deva-font-sans); line-height: var(--deva-lh-body); }
+h1, h2, h3 { font-family: var(--deva-font-serif); text-transform: uppercase; }
+h1 { color: var(--deva-gold-primary); letter-spacing: .2em; }
+h2 { color: var(--deva-gold-primary); letter-spacing: .15em; border-bottom: 1px solid var(--deva-border-gold); padding-bottom: 6px; }
+h3 { font-family: var(--deva-font-mono); color: var(--deva-blue-celestial); letter-spacing: .12em; font-size: .875rem; }
+code, pre { font-family: var(--deva-font-mono); }
+a { color: var(--deva-blue-celestial); text-underline-offset: 3px; }
+a:hover { color: var(--deva-gold-hover); }
+:focus-visible { outline: none; box-shadow: var(--deva-focus-ring); }
+
+/* Botões: primário preenchido; secundário contornado */
+.deva-btn-primary, .deva-btn-secondary {
+  font-family: var(--deva-font-serif); text-transform: uppercase; letter-spacing: .15em;
+  min-height: 44px; padding: .75rem 1.5rem; border-radius: var(--deva-radius-sm); cursor: pointer;
+  transition: all var(--deva-dur-fast) var(--deva-ease);
+}
+.deva-btn-primary { font-weight: 700; color: var(--deva-bg-canvas); background: var(--deva-gold-primary); border: 1px solid var(--deva-gold-primary); }
+.deva-btn-primary:hover { background: var(--deva-gold-hover); border-color: var(--deva-gold-hover); box-shadow: var(--deva-glow-gold); }
+.deva-btn-secondary { color: var(--deva-gold-primary); background: transparent; border: 1px solid var(--deva-gold-primary); }
+.deva-btn-secondary:hover { background: var(--deva-gold-primary); color: var(--deva-bg-canvas); box-shadow: var(--deva-glow-gold); }
+.deva-btn-mono {
+  font-family: var(--deva-font-mono); font-size: .85rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--deva-blue-celestial); background: var(--deva-bg-elevated); border: 1px solid var(--deva-border-control);
+  min-height: 44px; padding: .6rem 1.1rem; border-radius: var(--deva-radius-sm); cursor: pointer;
+}
+.deva-btn-mono:hover { border-color: var(--deva-blue-celestial); box-shadow: var(--deva-glow-blue); }
+button:disabled, [aria-disabled="true"] { cursor: not-allowed; opacity: .5; }
+
+/* Cards */
+.deva-card { background: var(--deva-bg-surface); border: 1px solid rgba(223,177,91,.2); border-radius: var(--deva-radius);
+  padding: 1.5rem; box-shadow: var(--deva-glow-blue); transition: all var(--deva-dur-base) var(--deva-ease); }
+.deva-card:hover { border-color: var(--deva-gold-primary); box-shadow: var(--deva-glow-gold); }
+.deva-card--emphasis { border-color: var(--deva-border-gold); }
+.deva-card--draft { background: var(--deva-bg-canvas); border-style: dashed; }
+.deva-card-title { font-family: var(--deva-font-serif); color: var(--deva-gold-primary); letter-spacing: .1em; margin-bottom: .4rem; }
+
+/* Tags: ouro nunca sinaliza estado */
+.deva-tag { font-family: var(--deva-font-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: 4px 8px; border-radius: var(--deva-radius-sm); background: var(--deva-bg-elevated);
+  border: 1px solid var(--deva-border-line); color: var(--deva-blue-celestial); display: inline-flex; align-items: center; gap: 6px; }
+.deva-tag--ativo { border-color: var(--deva-success); color: var(--deva-success); }
+.deva-tag--aviso { border-color: var(--deva-warning); color: var(--deva-warning); }
+.deva-tag--erro { border-color: var(--deva-error); color: var(--deva-error); }
+.deva-tag--arquivado { border-color: var(--deva-border-subtle); color: var(--deva-text-muted); }
+.deva-tag--destaque { border-color: var(--deva-gold-primary); color: var(--deva-gold-primary); } /* ênfase de marca, não estado */
+.node-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--deva-blue-celestial); }
+.node-dot--ativo { background: var(--deva-success); } .node-dot--arquivado { background: var(--deva-text-muted); }
+.node-dot--principal { background: var(--deva-gold-primary); }
+
+/* Formulários */
+.deva-label { display:block; margin-bottom:.35rem; font-family: var(--deva-font-mono); font-size:.75rem; text-transform: uppercase; letter-spacing:.12em; color: var(--deva-blue-celestial); }
+.deva-input { width:100%; min-height:44px; padding:.6rem .8rem; font-size:1rem; font-family: var(--deva-font-sans); color: var(--deva-white-parchment);
+  background: var(--deva-bg-elevated); border:1px solid var(--deva-border-control); border-radius: var(--deva-radius-sm); }
+.deva-input::placeholder { color: var(--deva-text-muted); }
+.deva-input:hover { border-color: var(--deva-blue-celestial); }
+.deva-input:focus-visible { border-color: var(--deva-gold-primary); box-shadow: var(--deva-focus-ring); }
+.deva-input[aria-invalid='true'] { border-color: var(--deva-error); }
+.deva-input.is-success { border-color: var(--deva-success); }
+.deva-input:disabled { background: var(--deva-bg-canvas); border: 1px dashed var(--deva-border-subtle); opacity:.5; cursor:not-allowed; }
+
+/* Tabela */
+table.deva-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+table.deva-table th { font-family: var(--deva-font-mono); color: var(--deva-blue-celestial); text-transform: uppercase; letter-spacing: .1em;
+  text-align: left; padding: 8px; background: var(--deva-bg-canvas); border-bottom: 1px solid var(--deva-border-gold); }
+table.deva-table td { padding: 8px; border-bottom: 1px solid var(--deva-border-subtle); }
+table.deva-table tr:hover td { background: var(--deva-bg-elevated); }
+
+/* Divisor canônico e rodapé */
+.astronomical-divider { text-align: center; color: var(--deva-blue-celestial); font-family: var(--deva-font-mono); letter-spacing: .3em; margin: 12px 0; }
+.deva-footer { border-top: 1px dashed rgba(141,169,196,.25); padding-top: 1rem; display: flex; justify-content: space-between;
+  font-family: var(--deva-font-mono); font-size: .75rem; color: var(--deva-blue-celestial); text-transform: uppercase; letter-spacing: .1em; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}

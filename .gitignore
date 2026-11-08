@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+venv/
+*.pyc
+.buildozer/
+bin/
+*.apk
+*.aab
+# cópia temporária criada por app/preparar_android.sh
+app/assets/

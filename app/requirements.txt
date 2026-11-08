@@ -1,0 +1,4 @@
+# Python 3.9 a 3.13 (testado em 3.12). Python 3.14 ainda nao tem pacotes prontos do Kivy.
+# O app usa somente Kivy: nao precisa de KivyMD nem de Pillow.
+kivy>=2.3.1,<2.4
+certifi

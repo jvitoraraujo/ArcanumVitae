@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <pattern id="stars" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="12" r="1" fill="#8DA9C4" opacity="0.15"/>
+      <circle cx="40" cy="30" r="1.4" fill="#8DA9C4" opacity="0.15"/>
+      <circle cx="22" cy="52" r="0.8" fill="#8DA9C4" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="640" fill="#0B111E"/>
+  <rect width="1280" height="640" fill="url(#stars)"/>
+  <rect x="32" y="32" width="1216" height="576" fill="none" stroke="#DFB15B" stroke-width="2"/>
+  <rect x="44" y="44" width="1192" height="552" fill="none" stroke="#DFB15B" stroke-width="0.75" opacity="0.7"/>
+  <g font-family="Georgia, serif" font-size="22" fill="#8DA9C4" text-anchor="middle">
+    <text x="32" y="40">✦</text><text x="1248" y="40">✦</text>
+    <text x="32" y="616">✦</text><text x="1248" y="616">✦</text>
+  </g>
+  <text x="640" y="140" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="22" letter-spacing="6" fill="#8DA9C4">DEVA ARCHIVE // GAME</text>
+  <text x="640" y="345" text-anchor="middle" font-family="'Cinzel','Cormorant Garamond',Georgia,serif" font-size="84" letter-spacing="14" fill="#DFB15B">ARCANUM VITAE</text>
+  <text x="640" y="410" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="20" letter-spacing="8" fill="#8DA9C4">✦ . * . ⟡ . * . ✦</text>
+  <text x="640" y="545" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="20" letter-spacing="4" fill="#94A3B8">SYS.REF: 2026.11 // KIVY • KIVYMD • PYTHON</text>
+</svg>
